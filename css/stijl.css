@@ -1,0 +1,77 @@
+/* Trigger warning: There's CSS below. */
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2;
+  text-align: center;
+}
+body * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main,
+aside {
+  display: table-row;
+}
+main {
+  height: 70%;
+  font-size: 2em;
+  letter-spacing: -.025em;
+}
+label,
+p {
+  display: table-cell;
+  vertical-align: middle;
+}
+#checkbox {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  border: .05em solid rgba(0, 0, 0, .40);
+  vertical-align: calc(-.17em);
+  border-radius: .17em;
+  box-shadow: 0 -.5em .05em -.1em #ececec inset, 0 0 .05em 0 rgba(0, 0, 0, .4);
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+#checkbox.privilege-checked {
+  cursor: auto;
+}
+#checkbox i,
+aside p {
+  opacity: 0;
+}
+#checkbox.privilege-checked i,
+aside.privilege-checked p {
+  opacity: 1;
+}
+#checkbox i {
+  position: absolute;
+  font-size: 1.4em;
+  top: -.3em;
+  right: -.1em;
+  transition: 250ms ease-in-out opacity;
+}
+aside {
+  height: 30%;
+  font-size: .9em;
+}
+aside p {
+  margin: 0;
+  transition: 1500ms ease-in opacity;
+}
